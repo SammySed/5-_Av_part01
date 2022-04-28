@@ -1,0 +1,45 @@
+﻿@model IEnumerable<_5º_Av_part01.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Cliente";
+}
+
+<h1>Cliente</h1>
+
+<a class = "btn btn-outline-primary" asp-action="Create">
+    Inserir Cliente
+</a>
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>            
+            
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var item in Model)
+        {
+
+            <tr classrc="align-middle">
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>           
+
+               
+
+            </tr>
+        }
+    </tbody>
+</table>
